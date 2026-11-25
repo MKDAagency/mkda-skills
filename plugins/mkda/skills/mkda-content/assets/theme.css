@@ -17,7 +17,7 @@ p, li { font-size: 50px; line-height: 1.35; }
 .handle { font-size: 44px; }
 .mark { color: var(--accent); }
 .dark .mark, .photo .mark { color: var(--accent-dark); }
-.step { font: 600 380px/.9 var(--title); color: var(--accent); }
+.step { font: 600 340px/1.25 var(--title); color: var(--accent); }
 .note { font: 600 34px var(--body); color: var(--accent); }
 .screen { width: 100%; max-height: 720px; object-fit: contain; border-radius: 28px; }
 .slide {

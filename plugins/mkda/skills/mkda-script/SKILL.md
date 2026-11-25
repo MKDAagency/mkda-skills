@@ -51,7 +51,7 @@ A safer alternative to script 2 has `n` `"2B"` and follows it.
 Read each one aloud, at about 2.5 words a second. The hook names the viewer's problem or situation within 3 seconds. Rewrite what stumbles or sounds written.
 
 ```bash
-python3 scripts/check.py <scripts.json> <~/MKDA/profile.md> [client.md] [~/MKDA/rules/script.md]
+python3 scripts/check.py <scripts.json> ~/MKDA/profile.md ~/MKDA/rules/script.md ~/MKDA/clients/<name>.md
 ```
 
 Fix every line it reports.

@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Check a batch of scripts against the basics and the user's layer.
 
-Usage: check.py <scripts.json> [profile.md] [client.md] [rules.md] ...   (later files win; banned words add up)
+Usage: check.py <scripts.json> [profile.md] [client.md] [rules.md] ...   (later files win; banned words add up, missing files are skipped)
        check.py --selftest
 Exit code 1 if there is a problem.
 """
-import json, re, sys
+import json, os, re, sys
 
 FIELDS = ["n", "level", "persona", "title", "hook", "body", "closing", "facts", "source", "to_confirm", "shoot_note"]
 
@@ -78,7 +78,7 @@ if __name__ == "__main__":
         sys.exit()
     try:
         data = json.load(open(sys.argv[1], encoding="utf-8"))
-        prof = merge([frontmatter(open(f, encoding="utf-8").read()) for f in sys.argv[2:]])
+        prof = merge([frontmatter(open(f, encoding="utf-8").read()) for f in map(os.path.expanduser, sys.argv[2:]) if os.path.exists(f)])
     except (OSError, ValueError) as e:
         sys.exit(f"cannot read: {e}")
     err = problems(data, prof)
