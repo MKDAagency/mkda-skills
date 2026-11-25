@@ -1,6 +1,6 @@
 ---
 name: mkda-content
-description: Creates Instagram carousels, stories, reels and captions in the user's brand, from idea to finished files, learning from every correction. Use when asked for social content.
+description: Turns an idea into Instagram carousels, stories, reels and captions in your colours and voice. Learns your corrections. Use for social posts, carousels, captions.
 license: Apache-2.0
 ---
 

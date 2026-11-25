@@ -1,12 +1,15 @@
 {
   "name": "mkda-skills",
   "description": "Skills by MKDA Digital Marketing Agency: video scripts, social content and proposals that learn how you work.",
-  "owner": { "name": "MKDA Digital Marketing Agency", "url": "https://mkdaagency.com" },
+  "owner": {
+    "name": "MKDA Digital Marketing Agency",
+    "url": "https://mkdaagency.com"
+  },
   "plugins": [
     {
       "name": "mkda",
       "source": "./plugins/mkda",
-      "description": "Video scripts, Instagram content and business proposals in your brand, learning from your corrections.",
+      "description": "Three skills that work in your brand and remember your corrections: video scripts, Instagram content (carousels, stories, reels, captions) and PDF proposals.",
       "category": "marketing"
     }
   ]

@@ -1,6 +1,6 @@
 ---
 name: mkda-proposals
-description: Creates 16:9 PDF business proposals and quotes in the user's brand, with their own services and prices, learning from every correction. Use when asked for a proposal or quote.
+description: Builds a polished 16:9 PDF proposal or quote in your brand, with your services and prices. Learns your corrections. Use for proposals, quotes, offers to clients.
 license: Apache-2.0
 ---
 

@@ -33,12 +33,12 @@ if (!local) {
   console.log("note: no private names list, client names were not checked");
   if (cmd === "zip") bad.push("the private names list is required to make a release");
 }
-const ALLOWED = /^(\.git(ignore|attributes)|README(\.it)?\.md|LICENSE|NOTICE|CHANGELOG\.md|\.claude-plugin\/marketplace\.json|\.github\/workflows\/check\.yml|shared\/learning\.md|scripts\/(release|test)\.mjs|plugins\/mkda\/\.claude-plugin\/plugin\.json|plugins\/mkda\/skills\/mkda-[a-z]+\/(SKILL\.md|(references|scripts|assets)\/[\w./-]+))$/;
+const ALLOWED = /^(\.git(ignore|attributes)|README(\.it)?\.md|LICENSE|NOTICE|CHANGELOG\.md|\.claude-plugin\/marketplace\.json|\.github\/workflows\/check\.yml|docs\/images\/[\w-]+\.(jpg|gif)|shared\/learning\.md|scripts\/(release|test)\.mjs|plugins\/mkda\/\.claude-plugin\/plugin\.json|plugins\/mkda\/skills\/mkda-[a-z]+\/(SKILL\.md|(references|scripts|assets)\/[\w./-]+))$/;
 for (const f of git("ls-files", "-co", "--exclude-standard").trim().split("\n")) {
   if (!existsSync(join(ROOT, f))) continue;
   if (!ALLOWED.test(f)) bad.push(`${f}: not in the allowed list`);
   if (lstatSync(join(ROOT, f)).isSymbolicLink()) bad.push(`${f}: symlink`);
-  if (/\.ttf$/.test(f) || f === "LICENSE" || f === "scripts/release.mjs") continue;
+  if (/\.(ttf|jpg|gif)$/.test(f) || f === "LICENSE" || f === "scripts/release.mjs") continue;
   const text = readFileSync(join(ROOT, f), "utf8");
   const body = f.endsWith("fonts.json") ? "" : text;
   if (body.includes("\0")) bad.push(`${f}: binary file`);

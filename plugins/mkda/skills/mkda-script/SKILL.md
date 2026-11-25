@@ -1,6 +1,6 @@
 ---
 name: mkda-script
-description: Writes video scripts (hooks, angles, full batches) for a business or a client, ready to shoot, learning from every correction. Use when asked for video scripts, hooks or angles.
+description: Writes ready-to-shoot video scripts with hooks in your voice, checked and in Word. Learns your corrections. Use for video scripts, hooks, angles, reels to film.
 license: Apache-2.0
 ---
 
