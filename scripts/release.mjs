@@ -73,7 +73,7 @@ if (cmd === "zip") {
   rmSync(join(ROOT, "dist"), { recursive: true, force: true });
   mkdirSync(join(ROOT, "dist"));
   for (const s of skills) {
-    execFileSync("git", ["archive", "--format=zip", `--prefix=${s}/`, "-o", join(ROOT, "dist", `${s}.zip`), `HEAD:plugins/mkda/skills/${s}`], { cwd: ROOT });
+    execFileSync("git", ["archive", "--format=zip", `--prefix=${s}/`, "--add-file=LICENSE", "--add-file=NOTICE", "-o", join(ROOT, "dist", `${s}.zip`), `HEAD:plugins/mkda/skills/${s}`], { cwd: ROOT });
     console.log(`dist/${s}.zip`);
   }
 }
