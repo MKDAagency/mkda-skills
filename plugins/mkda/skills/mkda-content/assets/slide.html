@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="{{LANG}}">
+<head><meta charset="utf-8"><title>{{BRAND}}</title><link rel="stylesheet" href="assets/theme.css"><script src="assets/gsap.min.js"></script>
+<style>
+  body, #root { width:1080px; height:{{HEIGHT}}px; overflow:hidden; background:var(--bg); }
+  #root { position:relative; }
+  .scene { position:absolute; inset:0; padding:200px 90px 340px; display:flex; flex-direction:column; justify-content:center; gap:48px; visibility:hidden; opacity:0; }
+  .scene.first { visibility:visible; opacity:1; }
+</style></head>
+<body data-format="{{FORMAT}}">
+<div id="root" data-composition-id="main" data-start="0" data-duration="{{DURATION}}" data-width="1080" data-height="{{HEIGHT}}">
+  <div class="scene first dark" id="s1" style="padding:110px 90px"><h2 data-line>[THE POINT]</h2><p data-line>[ONE SENTENCE]</p></div>
+</div>
+<script>
+  window.__timelines = window.__timelines || {};
+  const tl = gsap.timeline({ paused: true });
+  tl.from("#s1 p", { y: 50, opacity: 0, duration: 0.6, ease: "power3.out" }, 0.8);
+  window.__timelines["main"] = tl;
+  tl.seek(0);
+</script>
+</body>
+</html>

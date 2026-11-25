@@ -1,0 +1,11 @@
+{
+  "name": "mkda",
+  "displayName": "MKDA",
+  "version": "1.0.0",
+  "description": "Video scripts, Instagram content and business proposals in your brand, learning from your corrections.",
+  "author": { "name": "MKDA Digital Marketing Agency", "url": "https://mkdaagency.com" },
+  "homepage": "https://mkdaagency.com",
+  "repository": "https://github.com/MKDAagency/mkda-skills",
+  "license": "Apache-2.0",
+  "keywords": ["marketing", "instagram", "video-scripts", "proposals"]
+}
